@@ -386,6 +386,9 @@ header {
   .category-btn {
     padding: 0.6rem;
   }
+  .imagecard-bottom {
+    padding: 0.5rem;
+  }
 }
 
 /* Contributors */

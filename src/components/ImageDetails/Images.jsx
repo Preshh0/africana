@@ -20,7 +20,7 @@ const ImageDetails = ({ match }) => {
   );
   return (
     <div className="imagedetails-page">
-      <div className="image-details">
+      <div className="image-details" id="imageDetails">
         <div className="image-details-left">
           <h2> {selectedImage?.name}</h2>
           <p>{selectedImage?.description}</p>

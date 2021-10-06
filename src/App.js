@@ -15,7 +15,6 @@ import ImageDetails from "./components/ImageDetails/Images";
 import ModalPopup from "./components/Modal/Modal";
 
 function App() {
-  let history = useHistory();
   const [imagesCategories, setImagesCategories] = useState([]);
   const [selectedImageCategory, setSelectedImageCategory] = useState(null);
   const [images, setImages] = useState([]);
@@ -35,12 +34,9 @@ function App() {
   };
   const handleImageSelect = (img) => [setSelectedImage(img)];
 
-  const handleShowModal = (id) => {
-    history.push(`ImageId=${id}`);
-    setShowModal(true);
-  };
   const handleCloseModal = () => {
     setShowModal(false);
+    // history.push(`ImageId=${id}`);
   };
 
   return (
@@ -54,11 +50,11 @@ function App() {
             handleSelectedImageCategory: handleSelectedImageCategory,
             handleImageSelect: handleImageSelect,
             showModal: showModal,
-            handleShowModal: handleShowModal,
             handleCloseModal: handleCloseModal,
+            setShowModal: setShowModal,
           }}
         >
-          <ModalPopup />
+          <ModalPopup showModal={showModal} />
           <Switch>
             <Route
               path="/Images/:id"
