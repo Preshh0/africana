@@ -15,11 +15,12 @@ const ImageCard = ({ image, extraClassName }) => {
           onClick={() => {
             history.push(`?ImageId=${image?.id}`);
             ImgContext.setShowModal(true);
-
-            document.getElementById("imageDetails").scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+            const imageDetail = document.getElementById("imageDetails");
+            imageDetail &&
+              imageDetail.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
           }}
         />
         <div className="imagecard-bottom">
