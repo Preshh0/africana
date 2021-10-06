@@ -1,0 +1,15 @@
+.App {
+  font-family: "DMSans";
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url(/src/fonts/DMSans-Regular.ttf) format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url(/src/fonts/DMSans-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
