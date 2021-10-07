@@ -5,16 +5,9 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
-      <h5
-        className="logo footer-logo"
-        onClick={() => {
-          document.getElementById("header").scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-      >
-        Africana
-      </h5>
+      <Link to="/">
+        <h5 className="logo footer-logo">Africana</h5>
+      </Link>
 
       <div className="footer-links">
         <p>Privacy Policy</p>

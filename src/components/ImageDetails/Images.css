@@ -97,6 +97,7 @@
 @media only screen and (max-width: 528px) {
   .image-details {
     flex-direction: column;
+    flex-flow: column-reverse;
     gap: 1rem;
     padding-left: 0;
     padding: 1rem;
@@ -119,5 +120,8 @@
     gap: 1rem;
     width: 100%;
     overflow: scroll;
+  }
+  .image-details-bottomimg {
+    min-width: 90%;
   }
 }

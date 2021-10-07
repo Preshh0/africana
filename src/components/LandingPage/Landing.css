@@ -145,10 +145,11 @@ header {
 }
 
 .nav-button {
-  width: 50%;
   padding: 1rem;
   font-size: 1.2rem;
+  margin-right: 0.5rem;
 }
+
 .nav-rounded-profileImg {
   width: 30px;
   height: 30px;
@@ -233,6 +234,11 @@ header {
   font-size: 1rem;
 }
 
+.upl-and-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 996px) {
   .hero-right {
     width: 40%;
@@ -255,6 +261,40 @@ header {
   }
 }
 @media only screen and (max-width: 528px) {
+  .pri-btn {
+    padding: 1rem 1.2rem;
+  }
+  .nav-input {
+    display: none;
+    transition: all 0.3s linear;
+  }
+  .signedIn-logoactive {
+    margin-right: 2rem;
+    display: flex;
+  }
+  .signedIn-logo {
+    display: none;
+  }
+
+  .nav-right .hero-input-container svg {
+    position: initial;
+  }
+
+  .hide {
+    display: none;
+    width: 0;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .signedIn-inputactive {
+    display: flex;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
   .hero-right {
     width: 0;
   }
@@ -379,7 +419,7 @@ header {
   }
 
   .moreimages-btn {
-    font-size: 12px;
+    font-size: 17px;
 
     padding: 0.9rem 0.8rem;
   }

@@ -1,22 +1,12 @@
 import React, { Component, useEffect, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import Button from "../Common/button";
 import { FaSearch } from "react-icons/fa";
 import ImagesContext from "../Common/stateProvider";
+import ImageCard from "../Common/ImageCard";
 
 const Header = () => {
   const ImgContext = useContext(ImagesContext);
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearchQuery = (query) => {
-    setSearchQuery(query);
-  };
-  // const handleQuerySubmit = () => {
-  // const queriedImg = ImgContext.images?.filter((img) =>
-  //   img.name.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
-  // console.log(queriedImg);
-  // return queriedImg;
-  // };
 
   return (
     <header id="header">
@@ -30,20 +20,18 @@ const Header = () => {
           <div className="hero-input-container">
             <FaSearch />
             <input
-              value={searchQuery}
+              value={ImgContext.searchQuery}
               className="header-input"
               type="text"
               placeholder="Search for Image by Keyword"
-              onChange={(e) => handleSearchQuery(e.target.value)}
+              onChange={(e) => ImgContext.setSearchQuery(e.target.value)}
             />
           </div>
-
-          <Button
-            // onClick={handleQuerySubmit}
-            type="submit"
-            name="Search"
-          />
-          {/* <p>{queriedImg}</p> */}
+          {ImgContext.searchQuery && (
+            <Link to="/Feeds">
+              <Button type="submit" name="Search" />
+            </Link>
+          )}
         </div>
         <div className="hero-right imageholder">
           <img src="/images/Rectangle 3.png" alt="" />

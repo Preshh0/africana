@@ -31,6 +31,7 @@ export function getImages() {
 
     {
       id: 4,
+      name: "orange Giraffe Carvings",
       image: "/images/Rectangle 12.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -39,6 +40,7 @@ export function getImages() {
     },
     {
       id: 5,
+      name: "orange Giraffe Carvings",
       image: "/images/Rectangle 13.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -48,6 +50,7 @@ export function getImages() {
 
     {
       id: 6,
+      name: "orange Giraffe Carvings",
       image: "/images/Rectangle 14.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -57,6 +60,7 @@ export function getImages() {
 
     {
       id: 7,
+      name: "orange Giraffe Carvings",
       image: "/images/Rectangle 15.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -66,6 +70,7 @@ export function getImages() {
 
     {
       id: 8,
+      name: "orange Giraffe Carvings",
       image: "/images/Rectangle 16.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -75,6 +80,7 @@ export function getImages() {
 
     {
       id: 9,
+      name: "orange Giraffe Carvings",
       image: "/images/Rectangle 17.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -84,6 +90,7 @@ export function getImages() {
 
     {
       id: 10,
+      name: "orba Giraffe Carvings",
       image: "/images/Rectangle 18.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -93,6 +100,7 @@ export function getImages() {
 
     {
       id: 11,
+      name: "orane Giraffe Carvings",
       image: "/images/Rectangle 19.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -101,6 +109,7 @@ export function getImages() {
     },
     {
       id: 12,
+      name: "Moringa Giraffe Carvings",
       image: "/images/Rectangle 6.png",
       category: { id: 1, name: "Arts" },
       source: "Adefesiri Oluwada",
@@ -109,6 +118,7 @@ export function getImages() {
     },
     {
       id: 13,
+      name: "Mango Giraffe Carvings",
       image: "/images/Rectangle 11.png",
       category: { id: 2, name: "Education" },
       source: "Adefesiri Oluwada",

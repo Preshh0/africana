@@ -24,7 +24,9 @@ const ImageDetails = ({ match }) => {
         <div className="image-details-left">
           <h2> {selectedImage?.name}</h2>
           <p>{selectedImage?.description}</p>
-          <Button className="image-details-button" name="Download" />
+          <a href={selectedImage?.image} download>
+            <Button className="image-details-button" name="Download" />
+          </a>
           <div className="image-details-left-bottom">
             <p>Tags</p>
             <div className="image-details-left-bottomboxes">

@@ -13,6 +13,7 @@ import { getImages } from "./components/utils/getImages";
 import Feeds from "./components/Feeds/Feeds";
 import ImageDetails from "./components/ImageDetails/Images";
 import ModalPopup from "./components/Modal/Modal";
+import ScrollToTop from "./components/Common/useScrollToTop";
 
 function App() {
   const [imagesCategories, setImagesCategories] = useState([]);
@@ -20,6 +21,15 @@ function App() {
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [queriedImg, setQueriedImg] = useState([]);
+
+  useEffect(() => {
+    const QueriedImg = images?.filter((img) =>
+      img.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setQueriedImg(QueriedImg);
+  }, [searchQuery]);
 
   useEffect(() => {
     setImagesCategories([...getCategories()]);
@@ -44,17 +54,21 @@ function App() {
       <div className="App">
         <ImagesContext.Provider
           value={{
-            imagesCategories: imagesCategories,
-            images: images,
-            selectedImageCategory: selectedImageCategory,
-            handleSelectedImageCategory: handleSelectedImageCategory,
-            handleImageSelect: handleImageSelect,
-            showModal: showModal,
-            handleCloseModal: handleCloseModal,
-            setShowModal: setShowModal,
+            imagesCategories,
+            images,
+            selectedImageCategory,
+            handleSelectedImageCategory,
+            handleImageSelect,
+            showModal,
+            handleCloseModal,
+            setShowModal,
+            searchQuery,
+            setSearchQuery,
           }}
         >
+          <ScrollToTop />
           <ModalPopup showModal={showModal} />
+
           <Switch>
             <Route
               path="/Images/:id"

@@ -8,14 +8,20 @@ import Footer from "../LandingPage/Footer";
 
 const Feeds = () => {
   const imgContext = useContext(ImagesContext);
-  const categorizedImgContext = imgContext.selectedImageCategory
+
+  const categorizedImgs = imgContext.selectedImageCategory
     ? imgContext.images.filter(
         (i) => i.category.id === imgContext.selectedImageCategory
       )
     : imgContext.images;
 
-  console.log(categorizedImgContext);
-  const categorizedImg = categorizedImgContext.map((image) => (
+  const categorizedQueriedImgs = categorizedImgs?.filter((img) =>
+    img.name.toLowerCase().includes(imgContext.searchQuery.toLowerCase())
+  );
+
+  console.log(categorizedQueriedImgs);
+
+  const categorizedImgUI = categorizedQueriedImgs.map((image) => (
     <ImageCard key={image.id} image={image} extraClassName="feeds-card" />
   ));
   const breakpointColumnsObj = {
@@ -49,13 +55,21 @@ const Feeds = () => {
               </button>
             ))}
           </div>
+          {imgContext.searchQuery && (
+            <>
+              <h3 style={{ textAlign: "center" }}>
+                showing results for "{imgContext.searchQuery}"
+              </h3>
+              <br />
+            </>
+          )}
           <div className="feeds-imageContainer">
             <Masonry
               breakpointCols={breakpointColumnsObj}
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column"
             >
-              {categorizedImg}
+              {categorizedImgUI}
             </Masonry>
           </div>
         </div>
