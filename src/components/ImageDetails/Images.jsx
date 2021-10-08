@@ -5,7 +5,7 @@ import Button from "../Common/button";
 import ImagesContext from "../Common/stateProvider";
 import ImageCard from "../Common/ImageCard";
 
-const ImageDetails = ({ match }) => {
+const ImageDetails = () => {
   let ImageId = new URLSearchParams(useLocation().search).get("ImageId");
 
   const imgContext = useContext(ImagesContext);

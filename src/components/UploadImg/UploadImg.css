@@ -1,0 +1,138 @@
+.upload {
+  display: flex;
+  width: 100%;
+  height: 120vh;
+}
+.upload h6 {
+  font-weight: bold;
+}
+.upload h3 {
+  font-weight: bold;
+  margin: 1.8rem 0;
+}
+.upload p {
+  font-size: 1rem;
+}
+.upload-description input {
+  width: 100%;
+  color: var (--varwhite);
+
+  margin: 1.2rem 0;
+  border: none;
+  border-bottom: 3px solid var(--varwhite);
+  padding: 0.5rem 0.2rem;
+  font-size: 1rem;
+}
+.upload-left {
+  width: 50%;
+  padding: 2rem;
+  padding-right: 2rem;
+  padding-right: 10rem;
+}
+.upload-tag-input {
+  padding: 0.7rem;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.upload-right {
+  width: 50%;
+  background: var(--varwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.upload-right-drop {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+
+  border: 1px dashed;
+  border-radius: 0.2rem;
+}
+.upload-right-drop label {
+  font-size: 1.2rem;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.upload-tagcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 1rem 0;
+}
+.upload-tag {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+  color: var(--primary);
+}
+.upload-tag svg {
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding-top: 0.3rem;
+}
+.upload-previewImg {
+  position: relative;
+  width: 70%;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+.upload-previewImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-previewImg svg {
+  position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+  .upload-left {
+    padding-right: 2rem;
+  }
+  .upload-right-drop {
+    width: 65%;
+    height: 35%;
+  }
+}
+@media only screen and (max-width: 528px) {
+  .upload {
+    flex-direction: column-reverse;
+    position: relative;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .upload-left {
+    width: 100%;
+
+    padding: 1rem;
+  }
+  .upload-right {
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+  .upload-right-drop {
+    width: 100%;
+    height: 200px;
+  }
+
+  .upload h5 {
+    position: absolute;
+    top: 2%;
+  }
+}

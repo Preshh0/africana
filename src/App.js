@@ -14,6 +14,8 @@ import Feeds from "./components/Feeds/Feeds";
 import ImageDetails from "./components/ImageDetails/Images";
 import ModalPopup from "./components/Modal/Modal";
 import ScrollToTop from "./components/Common/useScrollToTop";
+import UploadImg from "./components/UploadImg/UploadImg";
+import UploadModal from "./components/Modal/UploadModal";
 
 function App() {
   const [imagesCategories, setImagesCategories] = useState([]);
@@ -21,6 +23,7 @@ function App() {
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [displayModal, setDisplayModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [queriedImg, setQueriedImg] = useState([]);
 
@@ -44,7 +47,7 @@ function App() {
   };
   const handleImageSelect = (img) => [setSelectedImage(img)];
 
-  const handleCloseModal = () => {
+  const handleCloseUploadModal = () => {
     setShowModal(false);
     // history.push(`ImageId=${id}`);
   };
@@ -60,10 +63,12 @@ function App() {
             handleSelectedImageCategory,
             handleImageSelect,
             showModal,
-            handleCloseModal,
+
             setShowModal,
             searchQuery,
             setSearchQuery,
+
+            handleCloseUploadModal,
           }}
         >
           <ScrollToTop />
@@ -78,10 +83,14 @@ function App() {
                 </div>
               )}
             />
+            <Route path="/UploadImg">
+              <UploadImg />
+            </Route>
 
             <Route path="/Feeds">
               <Feeds />
             </Route>
+
             <Route exact path="/">
               <Index />
             </Route>

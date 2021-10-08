@@ -57,7 +57,7 @@ const Contributors = () => {
             work? We need you. Join Indegene today as a creator and earn from
             your skill.
           </p>
-          <Button name="Become a Contributor" />
+          <Button name="Become a Contributor" className="contributors-btn" />
         </div>
 
         <div className="contributors-right-col">

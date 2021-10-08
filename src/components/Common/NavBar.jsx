@@ -57,7 +57,14 @@ const NavBar = ({ loggedIn }) => {
               onChange={(e) => imgContext.setSearchQuery(e.target.value)}
             />
             <div className="upl-and-profile" ref={uploadBtnRef}>
-              <Button name="Upload" className="nav-button" />
+              <Link to="/UploadImg">
+                <Button
+                  name="Upload"
+                  className="nav-button"
+                  // todisplayModal={imgContext.setDisplayModal(true)}
+                />
+              </Link>
+
               <p className="nav-rounded-profileImg">J</p>
             </div>
           </div>
