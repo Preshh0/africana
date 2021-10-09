@@ -15,7 +15,8 @@ import ImageDetails from "./components/ImageDetails/Images";
 import ModalPopup from "./components/Modal/Modal";
 import ScrollToTop from "./components/Common/useScrollToTop";
 import UploadImg from "./components/UploadImg/UploadImg";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import RegForm from "./components/Forms/Registration";
 import LoginForm from "./components/Forms/Login";
 
@@ -75,6 +76,7 @@ function App() {
         >
           <ScrollToTop />
           <ModalPopup showModal={showModal} />
+          <ToastContainer />
 
           <Switch>
             <Route

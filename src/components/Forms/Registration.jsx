@@ -25,7 +25,7 @@ const RegForm = () => {
               type="text"
               name="fname"
               id="fname"
-              placeholder="First Name"
+              placeholder="Full Name"
             />
           </div>
           <br />
