@@ -30,7 +30,7 @@
   text-decoration: underline;
 }
 .right-0 {
-  right: 0;
+  right: 10%;
 }
 
 .mt-52 {
@@ -75,11 +75,8 @@
 .label {
   display: block;
   font-weight: bold;
+  padding: 1rem 0;
   /* font-size: 40px; */
-}
-
-.relative {
-  position: relative;
 }
 
 .absolute {
@@ -306,21 +303,14 @@
   .formleft-col {
     display: none;
   }
+  .input {
+    width: 90%;
+  }
+
   .formright-col {
     width: 100%;
-    padding: 0 1rem;
   }
 }
-/*
-input {
-position: static;
-width: 143px;
-height: 26px;
-left: 49px;
-top: 14px;
-color:white;
-}
-*/
 
 .font {
   font-family: DM Sans;
@@ -385,14 +375,13 @@ initial {
 .first {
   display: block;
   font-weight: bold;
-  font-size: 40px;
 }
 
 .last {
   position: relative;
   display: flex;
   font-weight: bold;
-  font-size: 40px;
+
   left: 300px;
   bottom: 87px;
 }
@@ -403,33 +392,28 @@ initial {
   line-height: 40px;
   border-radius: none;
   padding: 0 3px;
-  font-size: 30px;
+
   width: 250px;
 }
 
-#lname {
+/* #lname {
   position: relative;
   left: 300px;
   top: -50px;
   line-height: 40px;
   border-radius: none;
-  font-size: 30px;
-  width: 250px;
-}
+} */
 
 .button.sec {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 20px 80px;
+  padding: 0.5rem 2rem;
   background: #000000;
   border-radius: 10px;
   color: #fff;
-  width: 289px;
-  height: 79px;
-  left: 740px;
-  top: 661px;
-  font-size: 30px;
+  font-size: 1.2rem;
+
   font-weight: bold;
 }
 
@@ -442,7 +426,6 @@ initial {
 }
 
 #user {
-  width: 550px;
   padding: 2px 5px;
 }
 
