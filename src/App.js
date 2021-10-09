@@ -15,7 +15,9 @@ import ImageDetails from "./components/ImageDetails/Images";
 import ModalPopup from "./components/Modal/Modal";
 import ScrollToTop from "./components/Common/useScrollToTop";
 import UploadImg from "./components/UploadImg/UploadImg";
-import UploadModal from "./components/Modal/UploadModal";
+
+import RegForm from "./components/Forms/Registration";
+import LoginForm from "./components/Forms/Login";
 
 function App() {
   const [imagesCategories, setImagesCategories] = useState([]);
@@ -85,6 +87,12 @@ function App() {
             />
             <Route path="/UploadImg">
               <UploadImg />
+            </Route>
+            <Route path="/Registration">
+              <RegForm />
+            </Route>
+            <Route path="/Login">
+              <LoginForm />
             </Route>
 
             <Route path="/Feeds">

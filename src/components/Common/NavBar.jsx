@@ -58,11 +58,7 @@ const NavBar = ({ loggedIn }) => {
             />
             <div className="upl-and-profile" ref={uploadBtnRef}>
               <Link to="/UploadImg">
-                <Button
-                  name="Upload"
-                  className="nav-button"
-                  // todisplayModal={imgContext.setDisplayModal(true)}
-                />
+                <Button name="Upload" className="nav-button" />
               </Link>
 
               <p className="nav-rounded-profileImg">J</p>
@@ -72,8 +68,12 @@ const NavBar = ({ loggedIn }) => {
 
         {!loggedIn && (
           <div className="nav-sign-up">
-            <Button name="Sign Up" />
-            <p style={{ color: `${navActive ? "black" : "white"}` }}>Login</p>
+            <Link to="/Registration">
+              <Button name="Sign Up" />
+            </Link>
+            <Link to="/Login">
+              <p style={{ color: `${navActive ? "black" : "white"}` }}>Login</p>
+            </Link>
           </div>
         )}
       </div>

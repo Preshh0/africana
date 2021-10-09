@@ -358,6 +358,9 @@ header {
 .imagecard {
   width: 100%;
 }
+.imagecard img {
+  cursor: pointer;
+}
 
 .imageCardCont1 {
   grid-area: imageLeft;

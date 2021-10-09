@@ -65,6 +65,7 @@
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .upload-tagcontainer {
   display: flex;
@@ -99,6 +100,7 @@
 
 .upload-previewImg svg {
   position: absolute;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {

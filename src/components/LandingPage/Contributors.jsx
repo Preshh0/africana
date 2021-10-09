@@ -1,33 +1,28 @@
 import React, { useContext } from "react";
 import Masonry from "react-masonry-css";
-import ImagesContext from "../Common/stateProvider";
+import { Link } from "react-router-dom";
 import Button from "../Common/button";
 
 const contributorsImgs = [
   {
     id: 4,
     contributorimage: "/images/Rectangle 11.png",
-    //   category: { id: 1, name: "Arts" },
   },
   {
     id: 5,
     contributorimage: "/images/Rectangle 4.png",
-    //   category: { id: 1, name: "Arts" },
   },
   {
     id: 6,
     contributorimage: "/images/Rectangle 6.png",
-    //   category: { id: 1, name: "Arts" },
   },
   {
     id: 7,
     contributorimage: "/images/Rectangle 5.png",
-    //   category: { id: 1, name: "Arts" },
   },
   {
     id: 8,
     contributorimage: "/images/Rectangle 7.png",
-    //   category: { id: 1, name: "Arts" },
   },
 ];
 
@@ -57,7 +52,9 @@ const Contributors = () => {
             work? We need you. Join Indegene today as a creator and earn from
             your skill.
           </p>
-          <Button name="Become a Contributor" className="contributors-btn" />
+          <Link to="/Registration">
+            <Button name="Become a Contributor" className="contributors-btn" />
+          </Link>
         </div>
 
         <div className="contributors-right-col">

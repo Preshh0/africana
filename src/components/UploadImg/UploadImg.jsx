@@ -3,6 +3,7 @@ import "./UploadImg.css";
 import { Link } from "react-router-dom";
 import Button from "../Common/button";
 import { AiOutlineClose } from "react-icons/ai";
+import LoginForm from "../Forms/Login";
 
 const UploadImg = () => {
   //   const [eachTag, setEachTag] = useState("");
