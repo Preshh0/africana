@@ -1,5 +1,7 @@
 # AFRICANA
 
+Unsplash, for the African culture!
+
 ### Live link
 
-[live link here](https://sca-africana.netlify.app/)
+[Click here to preview](https://sca-africana.netlify.app/)
