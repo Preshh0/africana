@@ -106,16 +106,6 @@
   /* font-size: 40px; */
   right: 12px;
 }
-/* padding: 12px;
-    display: block;
-    width: 400px;
-    margin: 15px;
-    height: 65px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid black;
-    font-size: 15px;
-*/
 
 #submit {
   padding: 12px 30px;
@@ -143,22 +133,6 @@
 .form a:hover {
   color: coral;
 }
-
-/*right side*/
-/* .formleft-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  background-color: whitesmoke;
-} */
-
-/* .formleft-col img {
-  width: 701px;
-  height: 1024px;
-  left: 701px;
-  top: 0px;
-} */
 
 #btn {
   display: flex;
@@ -309,6 +283,7 @@
 
   .formright-col {
     width: 100%;
+    padding: 0 1rem;
   }
 }
 
