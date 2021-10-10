@@ -61,7 +61,6 @@ const RegForm = () => {
               Email Address
             </label>
             <div className="relative">
-              <img className="absolute right-0" src="mail-fill.svg" />
               <input
                 className="input"
                 type="email"
@@ -77,18 +76,6 @@ const RegForm = () => {
               Password
             </label>
             <div className="relative">
-              <img
-                id="show"
-                className="absolute right-0"
-                src="eye-off-fill.svg"
-                onclick="showPassword()"
-              />
-              <img
-                id="hide"
-                className="absolute right-0"
-                src="eye-fill.svg"
-                onclick="hidePassword()"
-              />
               <input
                 className="input"
                 type="password"

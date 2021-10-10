@@ -162,7 +162,9 @@ header {
   display: flex;
   gap: 1rem;
 }
-
+.nav-sign-up a {
+  display: flex;
+}
 .hero {
   display: flex;
   height: 100%;
@@ -298,7 +300,13 @@ header {
   .signedIn-inputactive {
     display: flex;
     width: 100%;
-    padding-left: 1rem;
+    background: white;
+  }
+  :focus {
+    outline: 0;
+  }
+  .nav-sign-up a {
+    color: black;
   }
 
   .hero-right {

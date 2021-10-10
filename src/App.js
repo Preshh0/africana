@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import RegForm from "./components/Forms/Registration";
 import LoginForm from "./components/Forms/Login";
+import endPoints from "./components/services/EndPoints";
 
 function App() {
   const [imagesCategories, setImagesCategories] = useState([]);
@@ -44,6 +45,13 @@ function App() {
   useEffect(() => {
     setImages([...getImages()]);
   }, []);
+
+  // const getImages = async () => {
+  //   const images = await endPoints.getImages();
+  //   setImages(images);
+  // };
+  // useEffect(getImages, []);
+  console.log("my images are", images);
 
   const handleSelectedImageCategory = (category) => {
     setSelectedImageCategory(category);

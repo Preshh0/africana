@@ -72,7 +72,13 @@ const NavBar = ({ loggedIn }) => {
               <Button name="Sign Up" />
             </Link>
             <Link to="/Login">
-              <p style={{ color: `${navActive ? "black" : "white"}` }}>Login</p>
+              <p
+                style={{
+                  color: `${navActive ? "black" : "white"}`,
+                }}
+              >
+                Login
+              </p>
             </Link>
           </div>
         )}
