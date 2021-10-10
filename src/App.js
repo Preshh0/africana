@@ -31,13 +31,16 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [queriedImg, setQueriedImg] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [username, setUsername] = useState(false);
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("africanaToken");
-  //   console.log("token", token);
-  //   if (!token) return;
-  //   setLoggedIn(true);
-  // }, []);
+  useEffect(() => {
+    const token = localStorage.getItem("africanaToken");
+    const username = localStorage.getItem("africanaUsername");
+    console.log("token", token);
+    if (!token) return;
+    setLoggedIn(true);
+    setUsername(username);
+  }, []);
 
   useEffect(() => {
     setImagesCategories([...getCategories()]);
@@ -86,6 +89,8 @@ function App() {
             setSearchQuery,
             setLoggedIn,
             loggedIn,
+            username,
+            setUsername,
 
             handleCloseUploadModal,
           }}

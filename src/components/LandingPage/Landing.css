@@ -157,6 +157,7 @@ header {
   background: #ff7a7a;
   padding: 1.5rem;
   margin-right: 0;
+  text-transform: uppercase;
 }
 .nav-sign-up {
   display: flex;

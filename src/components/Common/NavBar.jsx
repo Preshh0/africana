@@ -22,6 +22,13 @@ const NavBar = ({}) => {
     setNavActive(window.pageYOffset > 82);
   };
 
+  const handleSignOut = () => {
+    localStorage.removeItem("africanaToken");
+    localStorage.removeItem("africanaUsername");
+    imgContext.setLoggedIn(false);
+    imgContext.setUsername("");
+  };
+
   return (
     <nav className={`navigation ${navActive && "navigation-active"}`}>
       <div className="nav-left">
@@ -61,7 +68,9 @@ const NavBar = ({}) => {
                 <Button name="Upload" className="nav-button" />
               </Link>
 
-              <p className="nav-rounded-profileImg">J</p>
+              <p onClick={handleSignOut} className="nav-rounded-profileImg">
+                {imgContext.username[0]}
+              </p>
             </div>
           </div>
         )}

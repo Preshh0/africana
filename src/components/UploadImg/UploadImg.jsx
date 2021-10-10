@@ -14,7 +14,7 @@ const UploadImg = () => {
 
   const handleSetTags = (e) => {
     const newTags = [...tags];
-    if (e.code === "Return") {
+    if (e.code === "Enter") {
       newTags.push(e.target.value);
       console.log(newTags);
       setTags(newTags);

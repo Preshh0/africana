@@ -47,10 +47,12 @@ const LoginForm = () => {
     console.log(error);
     if (error) return;
 
-    // const res = await endPoints.login(data);
-    // console.log(res);
-    // localStorage.setItem("africanaToken", res.token);
+    const res = await endPoints.login(data);
+    console.log(res);
+    localStorage.setItem("africanaToken", res.token);
+    localStorage.setItem("africanaUsername", res.user_name);
     context.setLoggedIn(true);
+    context.setUsername(res.user_name);
     history.push("/");
   };
 
