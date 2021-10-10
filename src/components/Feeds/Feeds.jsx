@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./feeds.css";
-import ImagesContext from "../Common/stateProvider";
 import Masonry from "react-masonry-css";
 import ImageCard from "../Common/ImageCard";
 import NavBar from "../Common/NavBar";
 import Footer from "../LandingPage/Footer";
+import ImagesContext from "../Common/stateProvider";
 
 const Feeds = () => {
   const imgContext = useContext(ImagesContext);
@@ -33,7 +33,7 @@ const Feeds = () => {
   return (
     <>
       <section className="feeds">
-        <NavBar loggedIn={true} />
+        <NavBar />
         <div className="container">
           <h2 className="categoriesh2">
             Explore Thousands of Categories of image

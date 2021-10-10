@@ -9,7 +9,7 @@ import Footer from "./Footer";
 const Index = () => {
   return (
     <>
-      <NavBar loggedIn={false} />
+      <NavBar />
       <Header />
       <ImageCategories />
       <Contributors />

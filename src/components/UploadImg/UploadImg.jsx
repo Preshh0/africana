@@ -14,8 +14,7 @@ const UploadImg = () => {
 
   const handleSetTags = (e) => {
     const newTags = [...tags];
-    if (e.code === "Enter") {
-      console.log("dfghfds");
+    if (e.code === "Return") {
       newTags.push(e.target.value);
       console.log(newTags);
       setTags(newTags);
@@ -38,17 +37,11 @@ const UploadImg = () => {
   const handleFileInput = (event) => {
     setSelectedFile(event.target.files[0]);
     setIsSelected(true);
-
-    // const file = e.target.files[0];
-    // if (file.size > 1024)
-    //   onFileSelectError({ error: "File size cannot exceed more than 1MB" });
-    // else onFileSelectSuccess(file)
   };
 
   const s = selectedFile?.type;
   let isImageFile = s?.split("/")[0] === "image";
 
-  //   const handleSubmission = () => {};
   console.log(selectedFile?.type);
   return (
     <div className="upload">
@@ -105,27 +98,8 @@ const UploadImg = () => {
             onChange={handleFileInput}
             hidden
           />
-          {/* {isSelected ? (
-            <div>
-              <p>Filename: {selectedFile.name}</p>
-              <p>Filetype: {selectedFile.type}</p>
-              <p>Size in bytes: {selectedFile.size}</p>
-              <p>
-                lastModifiedDate:{" "}
-                {selectedFile.lastModifiedDate.toLocaleDateString()}
-              </p>
-            </div>
-          ) : (
-            <p>Select a file to show details</p>
-          )} */}
 
-          <label
-            for="actual-btn"
-            // onClick={(e) => fileInput.current && fileInput.current.click()}
-            // className="upload-btn"
-          >
-            Upload from gallery
-          </label>
+          <label for="actual-btn">Upload from gallery</label>
         </div>
       </div>
     </div>

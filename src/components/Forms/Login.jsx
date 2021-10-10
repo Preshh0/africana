@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import ImagesContext from "../Common/stateProvider";
 import "./Forms.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import endPoints from "../services/EndPoints";
 import Joi from "joi-browser";
 
 const LoginForm = () => {
+  let history = useHistory();
+  const context = useContext(ImagesContext);
   const [data, setData] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
 
@@ -38,12 +41,17 @@ const LoginForm = () => {
     return error ? error.details[0].message : "";
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const error = validate();
+    console.log(error);
+    if (error) return;
 
-    setErrors(validate());
-
-    if (errors) return;
+    // const res = await endPoints.login(data);
+    // console.log(res);
+    // localStorage.setItem("africanaToken", res.token);
+    context.setLoggedIn(true);
+    history.push("/");
   };
 
   const handleChange = ({ target: input }) => {
@@ -69,7 +77,7 @@ const LoginForm = () => {
       <div className="formright-col">
         <h5 className="h5">Africana</h5>
         <br />
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form">
           <h2 className="h2">Welcome back.</h2>
           <br />
 
@@ -109,7 +117,7 @@ const LoginForm = () => {
             )}
           </div>
 
-          <button className="button primary mt-52" type="submit">
+          <button onClick={handleSubmit} className="button primary mt-52">
             Login
           </button>
           <br />

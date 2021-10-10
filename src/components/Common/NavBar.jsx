@@ -4,7 +4,7 @@ import Button from "./button";
 import { FaSearch } from "react-icons/fa";
 import ImagesContext from "./stateProvider";
 
-const NavBar = ({ loggedIn }) => {
+const NavBar = ({}) => {
   let searchRef = useRef();
   let logoRef = useRef();
   let uploadBtnRef = useRef();
@@ -33,7 +33,7 @@ const NavBar = ({ loggedIn }) => {
       </div>
 
       <div className="nav-right">
-        {loggedIn && (
+        {imgContext.loggedIn && (
           <div className="hero-input-container signedIn">
             <FaSearch
               onClick={() => {
@@ -66,7 +66,7 @@ const NavBar = ({ loggedIn }) => {
           </div>
         )}
 
-        {!loggedIn && (
+        {!imgContext.loggedIn && (
           <div className="nav-sign-up">
             <Link to="/Registration">
               <Button name="Sign Up" />

@@ -31,12 +31,7 @@ const ImageDetails = () => {
             <p>Tags</p>
             <div className="image-details-left-bottomboxes">
               <div className="bottomboxes-top">
-                <p>African culture</p>
-                <p>Arts</p>
-              </div>
-              <div className="bottomboxes-down">
-                <p>Animals</p>
-                <p>African Arts</p>
+                {selectedImage.tags && <p>{selectedImage?.tags}</p>}
               </div>
             </div>
           </div>

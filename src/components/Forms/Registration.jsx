@@ -1,9 +1,27 @@
-import React, { Component } from "react";
-
+import React, { useState, useContext } from "react";
+import ImagesContext from "../Common/stateProvider";
 import "./Forms.css";
 import { Link } from "react-router-dom";
+import endPoints from "../services/EndPoints";
 
 const RegForm = () => {
+  const context = useContext(ImagesContext);
+  const [data, setData] = useState({});
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(data);
+
+    const res = await endPoints.signup(data);
+    console.log(res);
+    localStorage.setItem("africanaToken", res.token);
+    context.setLoggedIn(true);
+  };
+
+  const handleChange = ({ target: input }) => {
+    setData({ ...data, [input.name]: input.value });
+  };
+
   return (
     <div className="form-container">
       <div className="formleft-col">
@@ -26,22 +44,10 @@ const RegForm = () => {
               name="fname"
               id="fname"
               placeholder="Full Name"
+              onChange={handleChange}
             />
           </div>
           <br />
-
-          {/* <label className="last" for="lname">
-            Last Name
-          </label>
-          <div className="relative">
-            <input
-              className="input"
-              type="text"
-              name="lname"
-              id="lname"
-              placeholder="Last Name"
-            />
-          </div> */}
 
           <label className="label" for="username">
             Username
@@ -50,9 +56,10 @@ const RegForm = () => {
             <input
               className="input"
               type="text"
-              name="lname"
+              name="username"
               id="user"
               placeholder="Username"
+              onChange={handleChange}
             />
           </div>
 
@@ -67,6 +74,7 @@ const RegForm = () => {
                 name="email"
                 id="email"
                 placeholder="Email Address"
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -82,11 +90,11 @@ const RegForm = () => {
                 name="password"
                 id="password"
                 placeholder="Password"
+                onChange={handleChange}
               />
             </div>
           </div>
-          <button className="button sec mt-54" type="button" onclick="signup()">
-            {" "}
+          <button className="button sec mt-54" onClick={handleSubmit}>
             Sign Up
           </button>
           <br />

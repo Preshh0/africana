@@ -2,4 +2,4 @@
 
 ### Live link
 
-[live link here](https://jolly-sinoussi-089326.netlify.app/)
+[live link here](https://sca-africana.netlify.app/)

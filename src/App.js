@@ -30,6 +30,27 @@ function App() {
   const [displayModal, setDisplayModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [queriedImg, setQueriedImg] = useState([]);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  // useEffect(() => {
+  //   const token = localStorage.getItem("africanaToken");
+  //   console.log("token", token);
+  //   if (!token) return;
+  //   setLoggedIn(true);
+  // }, []);
+
+  useEffect(() => {
+    setImagesCategories([...getCategories()]);
+  }, []);
+
+  const fetchImages = async () => {
+    const images = getImages();
+    setImages(images);
+  };
+
+  useEffect(fetchImages, []);
+
+  console.log("my images are", images);
 
   useEffect(() => {
     const QueriedImg = images?.filter((img) =>
@@ -38,29 +59,14 @@ function App() {
     setQueriedImg(QueriedImg);
   }, [searchQuery]);
 
-  useEffect(() => {
-    setImagesCategories([...getCategories()]);
-  }, []);
-
-  useEffect(() => {
-    setImages([...getImages()]);
-  }, []);
-
-  // const getImages = async () => {
-  //   const images = await endPoints.getImages();
-  //   setImages(images);
-  // };
-  // useEffect(getImages, []);
-  console.log("my images are", images);
-
   const handleSelectedImageCategory = (category) => {
     setSelectedImageCategory(category);
   };
+
   const handleImageSelect = (img) => [setSelectedImage(img)];
 
   const handleCloseUploadModal = () => {
     setShowModal(false);
-    // history.push(`ImageId=${id}`);
   };
 
   return (
@@ -78,6 +84,8 @@ function App() {
             setShowModal,
             searchQuery,
             setSearchQuery,
+            setLoggedIn,
+            loggedIn,
 
             handleCloseUploadModal,
           }}
