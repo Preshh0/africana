@@ -27,11 +27,11 @@ const Header = () => {
               onChange={(e) => ImgContext.setSearchQuery(e.target.value)}
             />
           </div>
-          {ImgContext.searchQuery && (
+          {
             <Link to="/Feeds">
               <Button type="submit" name="Search" />
             </Link>
-          )}
+          }
         </div>
         <div className="hero-right imageholder">
           <img src="/images/Rectangle 3.png" alt="" />
